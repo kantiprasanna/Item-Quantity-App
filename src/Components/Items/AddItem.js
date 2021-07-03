@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Card from '../UI/Card';
+import Button from '../UI/Button';
+
 import classes from './Items.Module.css';
 
 const AddItem = (props) => {
@@ -14,7 +16,7 @@ const AddItem = (props) => {
                 <input id="itemname" type="text"/>
                 <label htmlFor="quantity">Quantity</label>
                 <input id="quantity" type="number"/>
-                <button type="submit">Add Item</button>
+                <Button type="submit">Add Item</Button>
             </form>
         </Card>
 
