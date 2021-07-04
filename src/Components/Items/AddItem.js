@@ -12,6 +12,8 @@ const AddItem = (props) => {
     const addItemHandler = (event) => {
         event.preventDefault();
         console.log(enteredItemName, enteredQuantity);
+        setEnteredItemName('');
+        setEnteredQuantity('');
     };
 
     const itemNameChangeHandler = (event) => {
