@@ -17,7 +17,7 @@ const AddItem = (props) => {
         if(+enteredQuantity < 1){
             return;
         }
-        console.log(enteredItemName, enteredQuantity);
+        props.onAddItem(enteredItemName, enteredQuantity);
         setEnteredItemName('');
         setEnteredQuantity('');
     };
