@@ -11,6 +11,12 @@ const AddItem = (props) => {
 
     const addItemHandler = (event) => {
         event.preventDefault();
+        if(enteredItemName.trim().length === 0 || enteredQuantity.trim().length === 0){
+            return;
+        }
+        if(+enteredQuantity < 1){
+            return;
+        }
         console.log(enteredItemName, enteredQuantity);
         setEnteredItemName('');
         setEnteredQuantity('');
