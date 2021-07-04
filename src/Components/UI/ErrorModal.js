@@ -4,6 +4,7 @@ import Card from "./Card";
 import Button from "./Button";
 import classes from './ErrorModal.Module.css';
 
+
 const ErrorModal = (props) => {
     return (
         <div>
