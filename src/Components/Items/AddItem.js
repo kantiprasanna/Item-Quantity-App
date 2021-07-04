@@ -4,6 +4,7 @@ import Card from '../UI/Card';
 import Button from '../UI/Button';
 
 import classes from './Items.Module.css';
+import ErrorModal from "../UI/ErrorModal";
 
 const AddItem = (props) => {
     const [enteredItemName, setEnteredItemName] = useState('');
@@ -31,16 +32,18 @@ const AddItem = (props) => {
     };
 
     return (
-        <Card className={classes.input}>
-            <form onSubmit={addItemHandler}>
-                <label htmlFor="itemname">Item Name</label>
-                <input id="itemname" type="text" value={enteredItemName} onChange={itemNameChangeHandler}/>
-                <label htmlFor="quantity">Quantity</label>
-                <input id="quantity" type="number" value={enteredQuantity} onChange={quantityChangeHandler}/>
-                <Button type="submit">Add Item</Button>
-            </form>
-        </Card>
-
+        <div>
+            <ErrorModal title="An Error Occured" message="Something went wrong"></ErrorModal>
+            <Card className={classes.input}>
+                <form onSubmit={addItemHandler}>
+                    <label htmlFor="itemname">Item Name</label>
+                    <input id="itemname" type="text" value={enteredItemName} onChange={itemNameChangeHandler}/>
+                    <label htmlFor="quantity">Quantity</label>
+                    <input id="quantity" type="number" value={enteredQuantity} onChange={quantityChangeHandler}/>
+                    <Button type="submit">Add Item</Button>
+                </form>
+            </Card>
+        </div>
     );
 };
 
