@@ -9,13 +9,22 @@ import ErrorModal from "../UI/ErrorModal";
 const AddItem = (props) => {
     const [enteredItemName, setEnteredItemName] = useState('');
     const [enteredQuantity, setEnteredQuantity] = useState('');
+    const [error, setError] = useState();
 
     const addItemHandler = (event) => {
         event.preventDefault();
         if(enteredItemName.trim().length === 0 || enteredQuantity.trim().length === 0){
+            setError({
+                title: 'Invalid input',
+                message: 'Please enter a valid item name and quantity(non empty values).'
+            });
             return;
         }
         if(+enteredQuantity < 1){
+            setError({
+                title: 'Invalid quantity',
+                message: 'Please enter a valid quantity(greater than 0).'
+            });
             return;
         }
         props.onAddItem(enteredItemName, enteredQuantity);
@@ -31,9 +40,13 @@ const AddItem = (props) => {
         setEnteredQuantity(event.target.value);
     };
 
+    const errorHandler = () => {
+        setError(null);
+    };
+
     return (
         <div>
-            <ErrorModal title="An Error Occured" message="Something went wrong"></ErrorModal>
+            {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}></ErrorModal>}
             <Card className={classes.input}>
                 <form onSubmit={addItemHandler}>
                     <label htmlFor="itemname">Item Name</label>
