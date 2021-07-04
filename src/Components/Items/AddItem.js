@@ -28,9 +28,9 @@ const AddItem = (props) => {
         <Card className={classes.input}>
             <form onSubmit={addItemHandler}>
                 <label htmlFor="itemname">Item Name</label>
-                <input id="itemname" type="text" onChange={itemNameChangeHandler}/>
+                <input id="itemname" type="text" value={enteredItemName} onChange={itemNameChangeHandler}/>
                 <label htmlFor="quantity">Quantity</label>
-                <input id="quantity" type="number" onChange={quantityChangeHandler}/>
+                <input id="quantity" type="number" value={enteredQuantity} onChange={quantityChangeHandler}/>
                 <Button type="submit">Add Item</Button>
             </form>
         </Card>
