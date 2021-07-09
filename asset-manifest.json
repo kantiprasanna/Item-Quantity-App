@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Item-Quantity-App/static/css/main.90942262.chunk.css",
+    "main.js": "/Item-Quantity-App/static/js/main.a5d1f40d.chunk.js",
+    "main.js.map": "/Item-Quantity-App/static/js/main.a5d1f40d.chunk.js.map",
+    "runtime-main.js": "/Item-Quantity-App/static/js/runtime-main.d9ccbd3c.js",
+    "runtime-main.js.map": "/Item-Quantity-App/static/js/runtime-main.d9ccbd3c.js.map",
+    "static/js/2.96a06a4b.chunk.js": "/Item-Quantity-App/static/js/2.96a06a4b.chunk.js",
+    "static/js/2.96a06a4b.chunk.js.map": "/Item-Quantity-App/static/js/2.96a06a4b.chunk.js.map",
+    "static/js/3.64095129.chunk.js": "/Item-Quantity-App/static/js/3.64095129.chunk.js",
+    "static/js/3.64095129.chunk.js.map": "/Item-Quantity-App/static/js/3.64095129.chunk.js.map",
+    "index.html": "/Item-Quantity-App/index.html",
+    "static/css/main.90942262.chunk.css.map": "/Item-Quantity-App/static/css/main.90942262.chunk.css.map",
+    "static/js/2.96a06a4b.chunk.js.LICENSE.txt": "/Item-Quantity-App/static/js/2.96a06a4b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9ccbd3c.js",
+    "static/js/2.96a06a4b.chunk.js",
+    "static/css/main.90942262.chunk.css",
+    "static/js/main.a5d1f40d.chunk.js"
+  ]
+}
